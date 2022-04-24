@@ -1,0 +1,72 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #ebe5e5;
+}
+
+.calculator-grid {
+    display: grid;
+    background: #FFFFFF;
+    margin-top: 2rem;
+    justify-content: center;
+    grid-template-columns: repeat(4, 6rem);
+    grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+    box-shadow: 0 2px 60px rgba(158, 92, 72, .25);
+    
+    border-radius: 12px;
+    width: 30rem;
+    height: 50rem;
+    max-width: 95%;
+    margin: 2rem auto;
+}
+
+.calculator-grid > button {
+    cursor: pointer;
+    font-size: 2.5rem;
+    color: #716D5B;
+    border: 1px solid white;
+    outline: none;
+    background-color:rgba(255, 255, 255, 0.75); 
+}
+
+.calculator-grid > button:hover,
+.calculator-grid > button:focus {
+    background-color:rgba(113, 109, 91, .05);
+    border-radius: 12px;
+    color: #F6AE99;
+} 
+
+.output {
+    grid-column: 1 / -1;
+    background-color:rgba(113, 109, 91, .2);
+    display: flex;
+    border-radius: 8px;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: .75rem;
+    margin-top: 2rem;  
+    margin-bottom: 2rem;
+    word-wrap: break-word;
+    word-break: break-all;
+    
+}
+
+.output .previous-operand {
+    color: #716D5B;
+    font-size: 1.5rem;
+}
+
+.output .current-operand {
+    color: #F6AE99;
+    font-size: 2.5rem;
+}
+
+
+.calculator-grid > button.evaluate {
+    color: #F6AE99;
+    font-size: 3.5rem;
+}
